@@ -48,6 +48,7 @@
 \RequirePackage{setspace}
 % manage fonts
 \RequirePackage[quiet]{fontspec}
+% \RequirePackage{XeCJK}
 % To support LaTeX quoting style
 \defaultfontfeatures{Ligatures=TeX}
 % manage math fonts
@@ -143,11 +144,22 @@
 %-------------------------------------------------------------------------------
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
-\newcommand*{\headerfont}{\roboto}
-\newcommand*{\headerfontlight}{\robotolight}
-\newcommand*{\footerfont}{\sourcesanspro}
-\newcommand*{\bodyfont}{\sourcesanspro}
-\newcommand*{\bodyfontlight}{\sourcesansprolight}
+% \newcommand*{\headerfont}{\roboto}
+% \newcommand*{\headerfontlight}{\robotolight}
+% \newcommand*{\footerfont}{\sourcesanspro}
+% \newcommand*{\bodyfont}{\sourcesanspro}
+% \newcommand*{\bodyfontlight}{\sourcesansprolight}
+
+
+\newfontfamily\sourcehanserif[Path=./fonts/, Extension=.otf]{SourceHanSerifSC-Regular}
+\newfontfamily\sourcehanseriflight[Path=./fonts/, Extension=.otf]{SourceHanSerifSC-Light}
+\newfontfamily\sourcehanserifbold[Path=./fonts/, Extension=.otf]{SourceHanSerifSC-Bold}
+
+\newcommand*{\headerfont}{\sourcehanserifbold}
+\newcommand*{\headerfontlight}{\sourcehanseriflight}
+\newcommand*{\footerfont}{\sourcehanserif}
+\newcommand*{\bodyfont}{\sourcehanserif}
+\newcommand*{\bodyfontlight}{\sourcehanseriflight}
 
 %-------------------------------------------------------------------------------
 %                Configuration for styles
